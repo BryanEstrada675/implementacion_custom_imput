@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'register_screen.dart';
+import 'gps_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -64,6 +65,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 "¿No tienes cuenta? Crear cuenta",
                 style: TextStyle(fontSize: 16),
               ),
+            ),
+
+            const SizedBox(height: 25),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GPSScreen()),
+                );
+              },
+              child: const Text("Ir a pantalla GPS"),
             ),
           ],
         ),
